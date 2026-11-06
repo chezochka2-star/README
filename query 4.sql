@@ -1,0 +1,1 @@
+SELECT patient_id,COUNT(*) visits FROM appointment GROUP BY patient_id HAVING COUNT(*) > (SELECT AVG(n) FROM (SELECT COUNT(*) n FROM appointment GROUP BY patient_id) x);

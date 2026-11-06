@@ -1,0 +1,1 @@
+SELECT a.appointment_id,a.patient_id,a.appointment_date FROM appointment a LEFT JOIN diagnosis d USING(appointment_id) WHERE d.diagnosis_id IS NULL;

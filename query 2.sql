@@ -1,0 +1,2 @@
+SELECT a.appointment_id, CONCAT(p.given_name,' ',p.family_name) patient, CONCAT(c.given_name,' ',c.family_name) clinician, a.appointment_date
+FROM appointment a JOIN patient p USING(patient_id) JOIN clinician c USING(clinician_id);

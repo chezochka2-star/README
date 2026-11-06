@@ -1,0 +1,1 @@
+START TRANSACTION; UPDATE appointment SET status='Cancelled' WHERE appointment_id=15; SELECT * FROM appointment_audit WHERE appointment_id=15; ROLLBACK;
